@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+ vent-ng:
+  container_name: vent-ng
+  network_mode: bridge
+  image: samir82show/vent-ng:8
+  build: /root/vent-ng
+  restart: always
+  ports:
+   - 7777:80
+
+  #networks:
+  # - asset
+
+#networks:
+# asset:
+#  external: true
+
+#docker run -it --name jdk  -p 9191:9191 samir82show/onlineformreport:8
